@@ -1,8 +1,12 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 import App from "./App";
 import "./App.css"
 
 
-const appEL = document.getElementById('app')
-ReactDOM.render(<App />, appEL)
+const appEL = ReactDOM.createRoot(document.getElementById('app'))
+appEL.render(
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>
+)
